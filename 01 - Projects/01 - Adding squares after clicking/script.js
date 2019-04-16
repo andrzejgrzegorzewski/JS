@@ -16,6 +16,6 @@ btn.addEventListener('click', () => {
 
     // or
 
-    click % 5 == 0 ? document.body.appendChild(divElement).classList.add('circle') : document.querySelector('body').appendChild(divElement);
+    click % 5 == 0 ? document.body.appendChild(divElement).classList.add('circle') : document.body.appendChild(divElement);
 
 });
