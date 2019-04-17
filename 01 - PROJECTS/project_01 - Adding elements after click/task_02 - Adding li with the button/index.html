@@ -20,28 +20,23 @@
         cursor: pointer;
     }
 
-    div {
+    li {
+        display: block;
         float: left;
-        width: 8vh;
-        height: 8vh;
-        background-color: #000000;
-        color: white;
+        color: black;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 5vh;
-        text-align: center;
-        line-height: 8vh;
-        margin: 2px;
+        line-height: 6vh;
+        padding: 8px;
     }
 
-    .circle {
-        background-color: white;
-        color: black;
-        border: 2px solid black;
+    .bold {
+        text-justify: newspaper;
+        color: red;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 5vh;
-        text-align: center;
+        font-size: 8vh;
         line-height: 8vh;
-        border-radius: 50%;
+        padding: 8px;
     }
 </style>
 
@@ -53,8 +48,8 @@
 </head>
 
 <body>
-    <button>Create button</button>
-    <!-- <div class="circle"></div> -->
+    <button>Add number</button>
+    <ul></ul>
     <script src="script.js"></script>
 </body>
 
