@@ -13,6 +13,4 @@ const showMessage = (e) => {
             div.innerHTML = messages[i];
     }
 }
-
-
 input.addEventListener("input", showMessage);
