@@ -14,3 +14,10 @@ const showMessage = (e) => {
     }
 }
 input.addEventListener("input", showMessage);
+
+const love =[3,3,4,5];
+console.log(love[2]);
+
+const ala = 100;
+
+console.log(ala*4);
