@@ -1,9 +1,6 @@
 const names = [];
 const div = document.querySelector('div');
 
-
-
-
 function addName(e) {
     //zabezpieczenie przed oswiezeniem sie strony
     e.preventDefault();
