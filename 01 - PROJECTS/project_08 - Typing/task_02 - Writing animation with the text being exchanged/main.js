@@ -27,5 +27,3 @@ const cursorAnimation = () =>
 
 addLetter();
 setInterval(cursorAnimation, 300);
-
-// const indexTyping = setInterval(addLetter, time);
