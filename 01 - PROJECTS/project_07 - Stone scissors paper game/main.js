@@ -17,23 +17,23 @@ function handSelection() {
     game.playerHand = this.dataset.option;
     hands.forEach(hand => hand.style.boxShadow = "");
     this.style.boxShadow = "0 0 0 4px red";
-};
+}
 
 function aiChoice() {
     return hands[Math.floor(Math.random() * 3)].dataset.option;
-};
+}
 
 function checkResult(player, ai) {
     console.log(player, ai);
-    if (player === ai) {
+    if (player == ai) {
         console.log("draw");
-        return "draw";
+        return "draws";
     } else if ((player === "paper" && ai === "stone") || (player === "stone" && ai === "scissors") || (player === "scissors" && ai === "paper")) {
-        console.log("you winn");
-        return "you winn";
+        console.log("you win");
+        return "wins";
     } else {
         console.log("you lost");
-        return "you lost";
+        return "losses";
     }
 }
 
@@ -45,11 +45,11 @@ function publishResults(player, ai, result) {
 
     document.querySelector('p.numbers span').textContent = ++gameSummary.numbers;
 
-    if (result === "win") {
+    if (result === "wins") {
         document.querySelector('p.wins span').textContent = ++gameSummary.wins;
         document.querySelector('[data-summary="who-win"]').textContent = "YOU WIN !!!";
         document.querySelector('[data-summary="who-win"]').color = "yellow";
-    } else if (result === "loss") {
+    } else if (result === "losses") {
         document.querySelector('p.losses span').textContent = ++gameSummary.losses;
         document.querySelector('[data-summary="who-win"]').textContent = "COMPUTER WIN :(";
         document.querySelector('[data-summary="who-win"]').color = "red";
@@ -75,12 +75,10 @@ function startGame() {
 
     const gameResult = checkResult(game.playerHand, game.aiHand);
 
-    console.log(gameResult);
-
     publishResults(game.playerHand, game.aiHand, gameResult);
 
     // endGame();
-};
+}
 
 hands.forEach(hand => hand.addEventListener('click', handSelection));
 
