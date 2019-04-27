@@ -22,6 +22,7 @@ const addLetter = () => {
     }
     setTimeout(addLetter, 300);
 }
+
 const cursorAnimation = () =>
     spanCursor.classList.toggle('active');
 
