@@ -1,19 +1,19 @@
 /* PROTOTYP */
 
 /* CZĘŚĆ 1 */
-const Person = function(name, age) {
- this.name = name;
- this.age = age;
- this.children = [];
- // this.addChildren = function(name) {
- //  this.children.push(name);
- // }
+const Person = function (name, age) {
+    this.name = name;
+    this.age = age;
+    this.children = [];
+    // this.addChildren = function(name) {
+    //  this.children.push(name);
+    // }
 }
 
 // obiekt prototype znajduje się w konstruktorze i możemy do niego przypisywać metody do których dostęp mają wszystkie instancje (egzemplarze) stworzoene w oparciu o konstruktor
 
-Person.prototype.addChildren = function(name) {
- this.children.push(name);
+Person.prototype.addChildren = function (name) {
+    this.children.push(name);
 }
 
 // Do prototypu zdecydowanie częsciej przypisujemy funkcje (a więc metody) niż inne typy.
@@ -33,8 +33,7 @@ monika.addChildren('basia')
 // CO ZAWIERA PROTOTYP?
 // domyślnie właściwość constructor (funkcja konstruktora lub klasa) + to co zostanie przypisane do prototypu
 
-function Player() {
-}
+function Player() {}
 
 class User {
 
@@ -53,17 +52,17 @@ const darek = new janek.constructor()
 
 // DODANIE ELEMENTÓW DO PROTOTYPU (KONSTRUKTOR)
 function Citizen(country, citizenship) {
- this.country = country;
- this.citizenship = citizenship;
- this.changeCitizenship = function(citizenship) {
-  this.citizenship = citizenship;
-  console.log(`Zmiana za pomocą metody w instancji na obywatelstwo ${this.citizenship}`)
- }
+    this.country = country;
+    this.citizenship = citizenship;
+    this.changeCitizenship = function (citizenship) {
+        this.citizenship = citizenship;
+        console.log(`Zmiana za pomocą metody w instancji na obywatelstwo ${this.citizenship}`)
+    }
 }
 
-Citizen.prototype.changeCitizenship = function(citizenship) {
- this.citizenship = citizenship;
- console.log(`Zmiana za pomocą metody w protypie na obywatelstwo ${this.citizenship}`)
+Citizen.prototype.changeCitizenship = function (citizenship) {
+    this.citizenship = citizenship;
+    console.log(`Zmiana za pomocą metody w protypie na obywatelstwo ${this.citizenship}`)
 }
 
 const zenek = new Citizen("Polska", "polskie");
@@ -80,8 +79,8 @@ Citizen.prototype.age = 21;
 
 // Rozszerzanie prototypu także wbudowanych konstruktorów
 const arr = [5, 6, 7, 8];
-Array.prototype.delete = function(index) {
- return this.splice(index, 1)
+Array.prototype.delete = function (index) {
+    return this.splice(index, 1)
 }
 
 
@@ -99,7 +98,7 @@ Object.prototype.age = 20;
 zenek.__proto__.__proto__.__proto__
 
 // KILKA INNYCH ISTOTNYCH ELEMENTÓW
-// Instanceof 
+// Instanceof
 
 arr instanceof Array;
 arr instanceof Object;
@@ -110,13 +109,11 @@ zenek instanceof Object;
 zenek instanceof Function;
 
 
-// Object.getPrototypeOf 
+// Object.getPrototypeOf
 Object.getPrototypeOf(arr)
 Object.getPrototypeOf(zenek)
 
-// constructor czy prototyp - co łączy instancję z funkcją konstruktora (także  klasą) 
+// constructor czy prototyp - co łączy instancję z funkcją konstruktora (także  klasą)
 
 const janusz = new Citizen()
 //janusz.__proto__ = Citizen.prototype
-
-
