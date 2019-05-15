@@ -27,4 +27,4 @@ class Statistics {
     }
 }
 
-const stats = new Statistics();
+// const stats = new Statistics();
