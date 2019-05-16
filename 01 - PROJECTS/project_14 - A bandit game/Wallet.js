@@ -27,7 +27,6 @@ class Wallet {
                 throw new Error("Incorrect type of operation");
             }
         }
-
     }
 }
 
