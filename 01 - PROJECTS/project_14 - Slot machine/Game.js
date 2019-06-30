@@ -17,6 +17,7 @@ class Game {
         this.render();
     }
 
+    // render(colors = [url='img/stone_01.jpg', 'gray', 'yellow'], money = this.wallet.getWalletValue(), result = "", stats = [0, 0, 0], bid = 0, wonMoney = 0) {
     render(colors = ['red', 'gray', 'yellow'], money = this.wallet.getWalletValue(), result = "", stats = [0, 0, 0], bid = 0, wonMoney = 0) {
 
         this.boards.forEach((board, index) => {
@@ -40,7 +41,7 @@ class Game {
         const bid = Math.floor(this.inputBid.value);
 
         if (!this.wallet.checkCanPlay(bid)) {
-            return alert("You do not have enough monay or an incorrect value has been provided");
+            return alert("You do not have enough money or an incorrect value has been provided");
         }
 
         this.wallet.changeWallet(bid, "-");

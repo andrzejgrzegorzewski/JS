@@ -1,6 +1,20 @@
 class Draw {
     constructor() {
-        this.options = ['red', 'green', 'blue'];
+        // this.options = [
+        //     {
+        //     color: 'img/stone_01.jpg'},
+        //      {
+        //          color: 'img/paper_01.jpg'},
+        //       {
+        //           color: 'img/scissors_01.jp'
+        //       }
+        // ];
+        this.options = [
+            'yellow',
+             'green',
+              'blue'
+        ];
+        
         let _result = this.drawResult();
         this.getDrawResult = () => _result;
     }
@@ -16,5 +30,3 @@ class Draw {
         return colors;
     }
 }
-
-// const draw = new Draw();

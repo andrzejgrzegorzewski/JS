@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(img/slotMachine_02.jpg);
+    /* background-image: url(img/casino_02.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .wrap {
     width: 80%;
     margin: 5vh auto 0;
@@ -14,7 +22,6 @@
 
 h1 {
     text-align: center;
-    text-transform: uppercase;
     margin-bottom: 30px;
 }
 
